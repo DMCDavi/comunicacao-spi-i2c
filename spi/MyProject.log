@@ -1,0 +1,21 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F877A -DL -O11111114 -fo8 -N"E:\davim\GitHub\comunicacao-spi-i2c\spi\MyProject.mcppi" -SP"E:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"E:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"E:\davim\GitHub\comunicacao-spi-i2c\spi\" -IP"E:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "spi.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl"	 
+hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
+error: 18	304	 error: Can't open include file "xc.h"     #include <xc.h> 1 error in preprocessor.	E:\davim\GitHub\comunicacao-spi-i2c\spi\spi.c
+warning: 0	1507	Unknown pragma line ignored: ''	spi.c
+warning: 0	1507	Unknown pragma line ignored: ''	spi.c
+warning: 0	1507	Unknown pragma line ignored: ''	spi.c
+warning: 0	1507	Unknown pragma line ignored: ''	spi.c
+warning: 0	1507	Unknown pragma line ignored: ''	spi.c
+warning: 0	1507	Unknown pragma line ignored: ''	spi.c
+warning: 0	1507	Unknown pragma line ignored: ''	spi.c
+warning: 0	1507	Unknown pragma line ignored: ''	spi.c
+diagnostics: 0	122	Compilation Started	spi.c
+error: 24	318	Assigning to non-lvalue 'TRISC5'	spi.c
+error: 27	318	Assigning to non-lvalue 'TRISC3'	spi.c
+error: 32	318	Assigning to non-lvalue 'TRISC5'	spi.c
+error: 35	318	Assigning to non-lvalue 'TRISC3'	spi.c
+error: 53	324	Undeclared identifier 'SSPSTATbits' in expression	spi.c
+error: 64	324	Undeclared identifier '__delay_ms' in expression	spi.c
+error: 66	324	Undeclared identifier '__delay_ms' in expression	spi.c
+error: 68	324	Undeclared identifier '__delay_ms' in expression	spi.c
+error: 0	102	Finished (with errors): 25 abr 2022, 23:28:43	MyProject.mcppi

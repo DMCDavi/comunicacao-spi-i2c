@@ -1,0 +1,5 @@
+main
+	SPI1_Init
+	SPI1_Write
+	SPI_Write
+		____DoIFC

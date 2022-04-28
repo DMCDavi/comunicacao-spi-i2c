@@ -1,59 +1,53 @@
 #line 1 "E:/davim/GitHub/comunicacao-spi-i2c/spi/spi.c"
-#pragma config FOSC = XT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config BOREN = OFF
-#pragma config LVP = OFF
-#pragma config CPD = OFF
-#pragma config WRT = OFF
-#pragma config CP = OFF
-#line 22 "E:/davim/GitHub/comunicacao-spi-i2c/spi/spi.c"
-void SPI_Initialize_Master()
-{
- TRISC5 = 0;
- SSPSTAT = 0b00000000;
- SSPCON = 0b00100000;
- TRISC3 = 0;
-}
+#line 1 "e:/users/public/documents/mikroelektronika/mikroc pro for pic/include/stdio.h"
+#line 1 "e:/users/public/documents/mikroelektronika/mikroc pro for pic/include/stdlib.h"
 
-void SPI_Initialize_Slave()
-{
- TRISC5 = 0;
- SSPSTAT = 0b00000000;
- SSPCON = 0b00100000;
- TRISC3 = 1;
-}
 
-void SPI_Write(char incoming)
-{
- SSPBUF = incoming;
-}
 
-unsigned SPI_Ready2Read()
-{
- if (SSPSTAT & 0b00000001)
- return 1;
- else
- return 0;
-}
 
-char SPI_Read()
-{
- while ( !SSPSTATbits.BF );
- return(SSPBUF);
-}
 
+
+
+ typedef struct divstruct {
+ int quot;
+ int rem;
+ } div_t;
+
+ typedef struct ldivstruct {
+ long quot;
+ long rem;
+ } ldiv_t;
+
+ typedef struct uldivstruct {
+ unsigned long quot;
+ unsigned long rem;
+ } uldiv_t;
+
+int abs(int a);
+float atof(char * s);
+int atoi(char * s);
+long atol(char * s);
+div_t div(int number, int denom);
+ldiv_t ldiv(long number, long denom);
+uldiv_t uldiv(unsigned long number, unsigned long denom);
+long labs(long x);
+int max(int a, int b);
+int min(int a, int b);
+void srand(unsigned x);
+int rand();
+int xtoi(char * s);
+#line 39 "E:/davim/GitHub/comunicacao-spi-i2c/spi/spi.c"
 void main()
 {
- SPI_Initialize_Master();
+ SPI1_Init();
 
  while(1)
  {
- SPI_Write(0X0A);
- __delay_ms(100);
+ SPI1_Write(0X0A);
+ Delay_ms(100);
  SPI_Write(0X0F);
- __delay_ms(100);
+ Delay_ms(100);
  SPI_Write(0X15);
- __delay_ms(100);
+ Delay_ms(100);
  }
 }

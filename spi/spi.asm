@@ -18,12 +18,12 @@ L_main0:
 	MOVLW      21
 	MOVWF      FARG_SPI_Write_data_out+0
 	CALL       _SPI_Write+0
-;spi.c,9 :: 		Delay_ms(100);
-	MOVLW      2
+;spi.c,9 :: 		Delay_ms(1000);
+	MOVLW      11
 	MOVWF      R11+0
-	MOVLW      4
+	MOVLW      38
 	MOVWF      R12+0
-	MOVLW      186
+	MOVLW      93
 	MOVWF      R13+0
 L_main2:
 	DECFSZ     R13+0, 1
@@ -32,6 +32,7 @@ L_main2:
 	GOTO       L_main2
 	DECFSZ     R11+0, 1
 	GOTO       L_main2
+	NOP
 	NOP
 ;spi.c,10 :: 		}
 	GOTO       L_main0

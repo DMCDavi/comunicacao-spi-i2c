@@ -1,6 +1,7 @@
 [PROJECTS]
-Count=2
+Count=3
 Project0=..\..\conversor_ad\conversor_ad.mcppi
 Project1=MyProject.mcppi
+Project2=..\i2c\i2c.mcppi
 [ActiveProject]
-Index=1
+Index=2

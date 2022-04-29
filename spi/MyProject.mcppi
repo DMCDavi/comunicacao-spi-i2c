@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=..\i2c\i2c.c
+Value=spi.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -42,17 +42,22 @@ Count=0
 Count=0
 [Useses]
 File0=SPI
-Count=1
+File1=I2C
+Count=2
 [EXPANDED_NODES]
+0=conversor_ad.mcppi
 1=Sources
 15=MyProject.mcppi
+16=Sources
 30=i2c.mcppi
-Count=3
+33=Header Files
+Count=6
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries
+215=I2C
 331=SPI
-Count=3
+Count=4
 [PROGRAMMER_TYPE]
 Value=mikroE mikroProg
 [CODEGRIP_OPTIONS]
